@@ -1,0 +1,30 @@
+{
+  "name": "serverexpress",
+  "version": "1.0.0",
+  "description": "Servidor de Express.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johancastillo/serverExpress.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "server",
+    "javascript"
+  ],
+  "author": "Johan Castillo jcjohan2707@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johancastillo/serverExpress/issues"
+  },
+  "homepage": "https://github.com/johancastillo/serverExpress#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1"
+  }
+}
