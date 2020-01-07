@@ -18,7 +18,10 @@ const server = express();
 == Middlewares ==
 =================
 */
-server.use((req,res, next) => console.log('Request url:', req.url))
+server.use((req,res, next) => {
+    console.log('Request url:', req.url);
+    next();
+});
 
 /* 
 ==========
