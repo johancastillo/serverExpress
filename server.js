@@ -14,6 +14,16 @@ const colors = require('colors');
 */
 const server = express();
 
+
+/*
+==============
+== Settings ==
+==============
+*/
+server.set('appName', 'Mi primer servidor con Express.');
+
+server.set('views', __dirname + '/views');
+server.set('view engine', 'ejs');
 /*
 =================
 == Middlewares ==
@@ -28,7 +38,7 @@ server.use(morgan('dev'));
 */
 
 //Response for url: '/'
-server.get('/', (req,res) => res.send('<h1>Esta es la raíz del Servidor</h1>'))
+server.get('/', (req,res) => res.render('index.ejs'))
 
 //Response for url '/about'.
 server.get('/about', (req,res) => res.send('<h1>Aquí va el about</h1>'))
@@ -44,4 +54,7 @@ server.get('*', (req, res) => res.send('<h1>404 "Not found"</h1>'))
 == Port and CallBack. ==
 ========================
 */
-server.listen(3000, () => console.log("Server on 'localhost:3000'.".blue))
+server.listen(3000, () => {
+    console.log("Server on 'localhost:3000'.".blue);
+    console.log('Nombre de la App: ', server.get('appName'));
+});
