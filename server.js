@@ -4,6 +4,7 @@
 ==========================
 */
 const express = require('express');
+const morgan = require('morgan');
 const colors = require('colors');
 
 /*
@@ -18,10 +19,7 @@ const server = express();
 == Middlewares ==
 =================
 */
-server.use((req,res, next) => {
-    console.log('Request url:', req.url);
-    next();
-});
+server.use(morgan('dev'));
 
 /* 
 ==========
