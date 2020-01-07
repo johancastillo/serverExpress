@@ -8,5 +8,11 @@ const server = express();
 //Response for url: '/'
 server.get('/', (req,res) => res.send('<h1>Esta es la raíz del Servidor</h1>'));
 
+//Response fron url '/about'.
+server.get('/about', (req,res) => res.send('<h1>Aquí va el about</h1>'));
+
+//Response fron url '/login'.
+server.get('/login', (req,res) => res.send('<h1>Aquí va el login</h1>'));
+
 //Port and CallBack.
 server.listen(3000, () => console.log("Server on 'localhost:3000'.".blue));
